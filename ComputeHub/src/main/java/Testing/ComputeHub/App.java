@@ -1,5 +1,7 @@
 package Testing.ComputeHub;
 
+import java.time.Duration;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
@@ -38,6 +40,7 @@ public class App
 		loginButton.click();
     	
     	Thread.sleep(500);
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //    	wait.until(ExpectedConditions.alertIsPresent());
     	// Switch ke alert
         Alert alert = driver.switchTo().alert();
@@ -55,6 +58,7 @@ public class App
         email.sendKeys("paddy.h21@mhs.istts.ac.id");
         loginButton.click();
         Thread.sleep(500);
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         
         alert = driver.switchTo().alert();
 
@@ -64,6 +68,17 @@ public class App
      // Terima (klik OK) pada alert
         alert.accept();
         
+        email.clear();
+        email.sendKeys("admin@gmail.com");
+        pass.clear();
+        pass.sendKeys("admin1");
+        loginButton.click();
+        Thread.sleep(500);
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        WebElement logout=driver.findElement(By.id("logout"));
+        logout.click();
+        Thread.sleep(500);
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         email.clear();
         email.sendKeys("ryanko.4903@gmail.com");
         pass.clear();
