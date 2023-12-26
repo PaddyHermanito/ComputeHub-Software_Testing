@@ -1,6 +1,7 @@
 package Testing.ComputeHub;
 
 import java.time.Duration;
+import java.util.Iterator;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -120,6 +121,24 @@ public class App
     	cari.sendKeys("rtx");
     	WebElement cariBtn = driver.findElement(By.id("searchButton"));
     	cariBtn.click();
+//    	WebElement kategoriShop = driver.findElement(By.name("Category"));
+    	WebElement kategoriShop = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='select__indicators css-4xgw5l-IndicatorsContainer2']")));
+//    	WebElement kategoriShop = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='select__control css-162dk57-control']")));
+//    	WebElement kategoriShop = wait.until(ExpectedConditions.elementToBeClickable(By.id("select__input-container css-4v1wqi-Input2")));
+    	for (int i = 0; i < 3; i++) {
+    		kategoriShop.click();
+		}
+//    	kategoriShop.sendKeys("Monitor");
+    	WebElement isikategori = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='select__menu css-1nmdiq5-menu']")));
+    	System.out.println(isikategori);
+    	
+//    	WebElement min = driver.findElement(By.id("min"));
+    	WebElement min = wait.until(ExpectedConditions.elementToBeClickable(By.id("min")));
+    	min.clear();
+    	min.sendKeys("100000");
+    	WebElement max = driver.findElement(By.id("max"));
+    	max.clear();
+    	max.sendKeys("1000000");
         Thread.sleep(1000);
     	driver.quit();
     	System.out.println("Done");
