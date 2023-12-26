@@ -79,16 +79,20 @@ public class App
      // Terima (klik OK) pada alert
         alert.accept();
         //TC3, admin
-//        email.clear();
-//        email.sendKeys("admin@gmail.com");
-//        pass.clear();
-//        pass.sendKeys("admin1");
-//        loginButton.click();
-//        Thread.sleep(500);
+        email.clear();
+        email.sendKeys("admin@gmail.com");
+        pass.clear();
+        pass.sendKeys("admin1");
+        loginButton.click();
+        Thread.sleep(500);
 //        WebElement logout=driver.findElement(By.id("logout"));
-//        logout.click();
-//        Thread.sleep(500);
+        WebElement logout=wait.until(ExpectedConditions.elementToBeClickable(By.id("logout")));
+        logout.click();
+//        Thread.sleep(1000);
 //        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        email = wait.until(ExpectedConditions.elementToBeClickable(By.id("email")));
+        pass = wait.until(ExpectedConditions.elementToBeClickable(By.id("pass")));
+        loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("login")));
         email.clear();
         email.sendKeys("ryanko.4903@gmail.com");
         pass.clear();
@@ -116,7 +120,7 @@ public class App
     	cari.sendKeys("rtx");
     	WebElement cariBtn = driver.findElement(By.id("searchButton"));
     	cariBtn.click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     	driver.quit();
     	System.out.println("Done");
     }
