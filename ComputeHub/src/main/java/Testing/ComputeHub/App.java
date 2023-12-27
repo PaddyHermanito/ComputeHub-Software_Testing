@@ -2,6 +2,9 @@ package Testing.ComputeHub;
 
 import java.time.Duration;
 import java.util.Iterator;
+import java.util.List;
+import java.time.format.DateTimeFormatter;  
+import java.time.LocalDateTime;    
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -139,7 +142,41 @@ public class App
     	WebElement max = driver.findElement(By.id("max"));
     	max.clear();
     	max.sendKeys("1000000");
-        Thread.sleep(1000);
+    	WebElement item0=wait.until(ExpectedConditions.elementToBeClickable(By.id("0")));
+    	
+    	WebElement chat = wait.until(ExpectedConditions.elementToBeClickable(By.id("chat")));
+    	chat.click();
+    	WebElement textChat = wait.until(ExpectedConditions.elementToBeClickable(By.id("textChat")));
+    	textChat.sendKeys("halo lir");
+    	WebElement sendChat = driver.findElement(By.id("sendChat"));
+    	sendChat.click();
+    	
+    	//kalo mau cek chat terakhir, pake time send, tapi aku males ahihi
+//    	DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH.mm");  
+//    	LocalDateTime now = LocalDateTime.now();  
+//    	System.out.println(dtf.format(now));  
+//    	List<WebElement> chatEnd=driver.findElements(By.xpath("//div[@class='chat chat-end']"));
+//    	List<WebElement> chatEnd=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='chat chat-end']")));
+    	Thread.sleep(3000);
+    	
+    	WebElement logo = wait.until(ExpectedConditions.elementToBeClickable(By.id("logo")));
+    	logo.click();
+    	bestDeal = driver.findElement(By.id("best_deal"));
+    	bestDeal.click();
+    	WebElement item0homepage=wait.until(ExpectedConditions.elementToBeClickable(By.id("0")));
+    	item0homepage.click();
+    	WebElement addcart = wait.until(ExpectedConditions.elementToBeClickable(By.id("addcart")));
+    	addcart.click();
+    	alert = wait.until(ExpectedConditions.alertIsPresent());
+    	alert = driver.switchTo().alert();
+
+        // Ambil teks dari alert
+        alertText = alert.getText();
+//        System.out.println("Alert Text: " + alertText);
+     // Terima (klik OK) pada alert
+        alert.accept();
+        
+        Thread.sleep(2000);
     	driver.quit();
     	System.out.println("Done");
     }
