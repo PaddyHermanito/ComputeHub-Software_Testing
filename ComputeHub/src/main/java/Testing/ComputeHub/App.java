@@ -157,7 +157,7 @@ public class App
 //    	System.out.println(dtf.format(now));  
 //    	List<WebElement> chatEnd=driver.findElements(By.xpath("//div[@class='chat chat-end']"));
 //    	List<WebElement> chatEnd=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='chat chat-end']")));
-    	Thread.sleep(3000);
+    	Thread.sleep(1500);
     	
     	WebElement logo = wait.until(ExpectedConditions.elementToBeClickable(By.id("logo")));
     	logo.click();
@@ -175,7 +175,32 @@ public class App
 //        System.out.println("Alert Text: " + alertText);
      // Terima (klik OK) pada alert
         alert.accept();
-        
+        logo = wait.until(ExpectedConditions.elementToBeClickable(By.id("logo")));
+        logo.click();
+        WebElement item1homepage = wait.until(ExpectedConditions.elementToBeClickable(By.id("1")));
+        item1homepage.click();
+        WebElement plus = wait.until(ExpectedConditions.elementToBeClickable(By.id("+")));
+        for (int i = 0; i < 100; i++) {
+			plus.click();
+		}
+        addcart = wait.until(ExpectedConditions.elementToBeClickable(By.id("addcart")));
+        addcart.click();
+        alert = wait.until(ExpectedConditions.alertIsPresent());
+    	alert = driver.switchTo().alert();
+
+        // Ambil teks dari alert
+        alertText = alert.getText();
+//        System.out.println("Alert Text: " + alertText);
+     // Terima (klik OK) pada alert
+        alert.accept();
+        WebElement user = wait.until(ExpectedConditions.elementToBeClickable(By.id("user")));
+        user.click();
+        WebElement userProfile = wait.until(ExpectedConditions.elementToBeClickable(By.id("userProfile")));
+        userProfile.click();
+        WebElement history = wait.until(ExpectedConditions.elementToBeClickable(By.id("history")));
+        history.click();
+        WebElement Rejected = wait.until(ExpectedConditions.elementToBeClickable(By.id("Rejected")));
+        Rejected.click();
         Thread.sleep(2000);
     	driver.quit();
     	System.out.println("Done");
