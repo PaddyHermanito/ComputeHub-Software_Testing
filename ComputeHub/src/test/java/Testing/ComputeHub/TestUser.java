@@ -328,7 +328,70 @@ public class TestUser {
 		Thread.sleep(1000);
 		
 		List<WebElement> itemBestDeals = driver.findElements(By.xpath("//a[@class='MuiButtonBase-root MuiCardActionArea-root css-1oitmrd-MuiButtonBase-root-MuiCardActionArea-root']"));
-		itemBestDeals.get(1).click();
+		itemBestDeals.get(0).click();
+	}
+	
+	@Test
+	public void TC13() throws InterruptedException {
+		WebElement login = driver.findElement(By.id("login"));
+		login.click();
+		
+		WebElement email = driver.findElement(By.id("email"));
+		email.sendKeys("ryanko.4903@gmail.com");
+		
+		WebElement pass= driver.findElement(By.id("pass"));
+		pass.sendKeys("123456");
+		
+		WebElement loginButton = driver.findElement(By.id("login"));
+		loginButton.click();
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement cari = wait.until(ExpectedConditions.elementToBeClickable(By.id("searchItem")));
+        cari.click();
+    	cari.sendKeys("rtx");
+    	WebElement cariBtn = driver.findElement(By.id("searchButton"));
+    	cariBtn.click();
+    	
+    	Thread.sleep(1000);
+    	List<WebElement> items = driver.findElements(By.xpath("//div[@class='MuiCardContent-root h-48 bg-abu-gelap css-46bh2p-MuiCardContent-root']//div[@class='MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom line-clamp-2 css-i9mztq-MuiTypography-root']"));
+    	Boolean test = true;
+    	for (WebElement i : items) {
+			if (!i.getText().toLowerCase().contains("rtx")) {
+				test = false;
+				break;
+			}
+		}
+    	Assert.assertTrue(test);
+	}
+	
+	@Test
+	public void TC14() throws InterruptedException {
+		WebElement login = driver.findElement(By.id("login"));
+		login.click();
+		
+		WebElement email = driver.findElement(By.id("email"));
+		email.sendKeys("ryanko.4903@gmail.com");
+		
+		WebElement pass= driver.findElement(By.id("pass"));
+		pass.sendKeys("123456");
+		
+		WebElement loginButton = driver.findElement(By.id("login"));
+		loginButton.click();
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement shop = wait.until(ExpectedConditions.elementToBeClickable(By.id("shop")));
+        shop.click();
+        
+        WebElement comboCategory = driver.findElement(By.id("filter-category"));
+        comboCategory.click();
+        WebElement isiCategory = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='select__menu css-1nmdiq5-menu']")));
+        isiCategory.click();
+        comboCategory.click();
+        WebElement inputCategory = driver.findElement(By.xpath("//input[@class='select__input' and @type='text']"));
+        inputCategory.sendKeys("Monitor");
+        isiCategory = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='select__menu css-1nmdiq5-menu']")));
+        isiCategory.click();
+        Thread.sleep(2000);
 	}
 	
 	@AfterMethod
