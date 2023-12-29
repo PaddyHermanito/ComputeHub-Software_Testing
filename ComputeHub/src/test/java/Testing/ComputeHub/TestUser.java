@@ -42,24 +42,43 @@ public class TestUser {
     	
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-//    	Thread.sleep(500);
-//    	wait.until(ExpectedConditions.alertIsPresent());
-    	// Switch ke alert
         alert = driver.switchTo().alert();
 
-        // Ambil teks dari alert
         String alertText = alert.getText();
         Assert.assertEquals("Password salah", alertText);
-        // Terima (klik OK) pada alert
         alert.accept();
         
-        // Switch back to the default content
+        driver.switchTo().defaultContent();
+	}
+	
+	@Test
+	public void TC2() {
+		WebElement login = driver.findElement(By.id("login"));
+		login.click();
+		
+		WebElement email = driver.findElement(By.id("email"));
+		email.sendKeys("paddy.h21@mhs.istts.ac.id");
+		
+		WebElement pass= driver.findElement(By.id("pass"));
+		pass.sendKeys("123456");
+		
+		WebElement loginButton = driver.findElement(By.id("login"));
+		loginButton.click();
+    	
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        alert = driver.switchTo().alert();
+
+        String alertText = alert.getText();
+        Assert.assertEquals("Email is not registered", alertText);
+        alert.accept();
+        
         driver.switchTo().defaultContent();
 	}
 	
 	@AfterMethod
 	public void closeBrowser() throws InterruptedException{
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		driver.close();
 	}
 }
