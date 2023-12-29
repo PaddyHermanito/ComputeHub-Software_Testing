@@ -1,12 +1,16 @@
 package Testing.ComputeHub;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -28,7 +32,7 @@ public class TestUser {
 	}
 	
 	@Test
-	public void TC1() {
+	public void TC01() {
 		WebElement login = driver.findElement(By.id("login"));
 		login.click();
 		
@@ -53,7 +57,7 @@ public class TestUser {
 	}
 	
 	@Test
-	public void TC2() {
+	public void TC02() {
 		WebElement login = driver.findElement(By.id("login"));
 		login.click();
 		
@@ -78,7 +82,7 @@ public class TestUser {
 	}
 	
 	@Test
-	public void TC3() throws InterruptedException {
+	public void TC03() throws InterruptedException {
 		WebElement login = driver.findElement(By.id("login"));
 		login.click();
 		
@@ -96,7 +100,7 @@ public class TestUser {
 	}
 	
 	@Test
-	public void TC4() throws InterruptedException {
+	public void TC04() throws InterruptedException {
 		WebElement login = driver.findElement(By.id("login"));
 		login.click();
 		
@@ -114,7 +118,7 @@ public class TestUser {
 	}
 	
 	@Test
-	public void TC5() {
+	public void TC05() {
 		WebElement login = driver.findElement(By.id("login"));
 		login.click();
 		
@@ -148,7 +152,7 @@ public class TestUser {
 	}
 	
 	@Test
-	public void TC6() {
+	public void TC06() {
 		WebElement login = driver.findElement(By.id("login"));
 		login.click();
 		
@@ -166,7 +170,7 @@ public class TestUser {
 	}
 	
 	@Test
-	public void TC7() {
+	public void TC07() {
 		WebElement login = driver.findElement(By.id("login"));
 		login.click();
 		
@@ -184,7 +188,7 @@ public class TestUser {
 	}
 	
 	@Test
-	public void TC8() {
+	public void TC08() {
 		WebElement login = driver.findElement(By.id("login"));
 		login.click();
 		
@@ -202,7 +206,7 @@ public class TestUser {
 	}
 	
 	@Test
-	public void TC9() {
+	public void TC09() {
 		WebElement login = driver.findElement(By.id("login"));
 		login.click();
 		
@@ -301,6 +305,30 @@ public class TestUser {
         alert.accept();
         
         driver.switchTo().defaultContent();
+	}
+	
+	@Test
+	public void TC12() throws InterruptedException {
+		WebElement login = driver.findElement(By.id("login"));
+		login.click();
+		
+		WebElement email = driver.findElement(By.id("email"));
+		email.sendKeys("ryanko.4903@gmail.com");
+		
+		WebElement pass= driver.findElement(By.id("pass"));
+		pass.sendKeys("123456");
+		
+		WebElement loginButton = driver.findElement(By.id("login"));
+		loginButton.click();
+
+		Thread.sleep(1000);
+		Actions action = new Actions(driver);
+		action.sendKeys(Keys.PAGE_DOWN).build().perform();
+		action.sendKeys(Keys.PAGE_DOWN).build().perform();
+		Thread.sleep(1000);
+		
+		List<WebElement> itemBestDeals = driver.findElements(By.xpath("//a[@class='MuiButtonBase-root MuiCardActionArea-root css-1oitmrd-MuiButtonBase-root-MuiCardActionArea-root']"));
+		itemBestDeals.get(1).click();
 	}
 	
 	@AfterMethod
