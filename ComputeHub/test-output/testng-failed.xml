@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Testing.ComputeHub.TestUser">
+      <class name="Testing.ComputeHub.TestAdmin">
         <methods>
           <include name="closeBrowser"/>
-          <include name="TC24"/>
           <include name="launchBrowser"/>
+          <include name="TC11"/>
         </methods>
-      </class> <!-- Testing.ComputeHub.TestUser -->
+      </class> <!-- Testing.ComputeHub.TestAdmin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
