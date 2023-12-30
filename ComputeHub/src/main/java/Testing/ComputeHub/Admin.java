@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -96,6 +97,30 @@ public class Admin {
         driver.switchTo().defaultContent();
         actions0=wait.until(ExpectedConditions.presenceOfElementLocated(By.id("actions0"))).findElement(By.id("edit0"));     
         actions.moveToElement(actions0).perform();
+        WebElement Report = wait.until(ExpectedConditions.elementToBeClickable(By.id("Report")));
+        Report.click();
+        WebElement pending = wait.until(ExpectedConditions.elementToBeClickable(By.id("Pending")));
+        pending.click();
+        WebElement AllTrans = wait.until(ExpectedConditions.elementToBeClickable(By.id("All Transaction")));
+        AllTrans.click();
+        WebElement searchinv= wait.until(ExpectedConditions.elementToBeClickable(By.id("searchinv")));
+        searchinv.sendKeys("INV20231207011");
+        searchinv.clear();
+        WebElement dateStart = wait.until(ExpectedConditions.elementToBeClickable(By.id("dateStart")));
+        dateStart.click();
+        actions.keyDown(Keys.SHIFT).sendKeys(Keys.TAB).sendKeys(Keys.TAB).keyUp(Keys.SHIFT).perform();
+//        dateStart.clear();
+        dateStart.sendKeys("08122023");
+        
+        //skip ke tc15
+        WebElement chat = wait.until(ExpectedConditions.elementToBeClickable(By.id("Chat")));
+        chat.click();
+        WebElement user0 = wait.until(ExpectedConditions.elementToBeClickable(By.id("user0")));
+        user0.click();
+        WebElement textChat = wait.until(ExpectedConditions.elementToBeClickable(By.id("textChat")));
+        textChat.sendKeys("ya");
+        WebElement sendChat = wait.until(ExpectedConditions.elementToBeClickable(By.id("sendChat")));
+        sendChat.click();
         Thread.sleep(2000);
     	driver.quit();
     	System.out.println("Done");
