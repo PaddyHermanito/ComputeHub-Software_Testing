@@ -82,7 +82,7 @@ public class TestUser {
 	}
 	
 	@Test
-	public void TC03() throws InterruptedException {
+	public void TC03() {
 		WebElement login = driver.findElement(By.id("login"));
 		login.click();
 		
@@ -94,13 +94,15 @@ public class TestUser {
 		
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
-    		
-		Thread.sleep(1000);
+    	
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement navbar = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("Master Item")));
+		
 		Assert.assertEquals(hostUrl+"admin/", driver.getCurrentUrl());
 	}
 	
 	@Test
-	public void TC04() throws InterruptedException {
+	public void TC04() {
 		WebElement login = driver.findElement(By.id("login"));
 		login.click();
 		
@@ -113,7 +115,9 @@ public class TestUser {
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
     		
-		Thread.sleep(1000);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement best_deal = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("best_deal")));
+		
 		Assert.assertEquals(hostUrl, driver.getCurrentUrl());
 	}
 	
@@ -146,7 +150,7 @@ public class TestUser {
 		WebElement btnRegister = driver.findElement(By.id("register"));
 		btnRegister.click();
 		
-		// Field address dikosongi
+		// Field address dikosongkan
 		WebElement errorAddress = driver.findElement(By.id("error_address"));
         Assert.assertEquals("Address is required", errorAddress.getText());
 	}
@@ -308,7 +312,7 @@ public class TestUser {
 	}
 	
 	@Test
-	public void TC12() throws InterruptedException {
+	public void TC12() {
 		WebElement login = driver.findElement(By.id("login"));
 		login.click();
 		
@@ -321,18 +325,17 @@ public class TestUser {
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
 
-		Thread.sleep(1000);
-		Actions action = new Actions(driver);
-		action.sendKeys(Keys.PAGE_DOWN).build().perform();
-		action.sendKeys(Keys.PAGE_DOWN).build().perform();
-		Thread.sleep(1000);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement best_deal = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("best_deal")));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(best_deal).perform();
 		
-		List<WebElement> itemBestDeals = driver.findElements(By.xpath("//a[@class='MuiButtonBase-root MuiCardActionArea-root css-1oitmrd-MuiButtonBase-root-MuiCardActionArea-root']"));
+		List<WebElement> itemBestDeals = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//a[@class='MuiButtonBase-root MuiCardActionArea-root css-1oitmrd-MuiButtonBase-root-MuiCardActionArea-root']")));
 		itemBestDeals.get(0).click();
 	}
 	
 	@Test
-	public void TC13() throws InterruptedException {
+	public void TC13() {
 		WebElement login = driver.findElement(By.id("login"));
 		login.click();
 		
@@ -352,8 +355,7 @@ public class TestUser {
     	WebElement cariBtn = driver.findElement(By.id("searchButton"));
     	cariBtn.click();
     	
-    	Thread.sleep(1000);
-    	List<WebElement> items = driver.findElements(By.xpath("//div[@class='MuiCardContent-root h-48 bg-abu-gelap css-46bh2p-MuiCardContent-root']//div[@class='MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom line-clamp-2 css-i9mztq-MuiTypography-root']"));
+    	List<WebElement> items = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='MuiCardContent-root h-48 bg-abu-gelap css-46bh2p-MuiCardContent-root']//div[@class='MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom line-clamp-2 css-i9mztq-MuiTypography-root']")));
     	Boolean test = true;
     	for (WebElement i : items) {
 			if (!i.getText().toLowerCase().contains("rtx")) {
@@ -365,7 +367,7 @@ public class TestUser {
 	}
 	
 	@Test
-	public void TC14() throws InterruptedException {
+	public void TC14() {
 		WebElement login = driver.findElement(By.id("login"));
 		login.click();
 		
@@ -391,7 +393,80 @@ public class TestUser {
         inputCategory.sendKeys("Monitor");
         isiCategory = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='select__menu css-1nmdiq5-menu']")));
         isiCategory.click();
-        Thread.sleep(2000);
+        
+        List<WebElement> items = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='MuiCardContent-root h-48 bg-abu-gelap css-46bh2p-MuiCardContent-root']//div[@class='MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom line-clamp-2 css-i9mztq-MuiTypography-root']")));
+	}
+	
+	@Test
+	public void TC15() {
+		WebElement login = driver.findElement(By.id("login"));
+		login.click();
+		
+		WebElement email = driver.findElement(By.id("email"));
+		email.sendKeys("ryanko.4903@gmail.com");
+		
+		WebElement pass= driver.findElement(By.id("pass"));
+		pass.sendKeys("123456");
+		
+		WebElement loginButton = driver.findElement(By.id("login"));
+		loginButton.click();
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement shop = wait.until(ExpectedConditions.elementToBeClickable(By.id("shop")));
+        shop.click();
+        
+        List<WebElement> items = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='MuiCardContent-root h-48 bg-abu-gelap css-46bh2p-MuiCardContent-root']//div[@class='MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom line-clamp-2 css-i9mztq-MuiTypography-root']")));
+        
+        WebElement min = wait.until(ExpectedConditions.elementToBeClickable(By.id("min")));
+    	min.clear();
+    	min.sendKeys("1000000");
+    	WebElement max = driver.findElement(By.id("max"));
+    	max.click();
+    	max.clear();
+    	max.sendKeys("10000000");
+
+    	items = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='MuiCardContent-root h-48 bg-abu-gelap css-46bh2p-MuiCardContent-root']//div[@class='MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom line-clamp-2 css-i9mztq-MuiTypography-root']")));
+	}
+	
+	@Test
+	public void TC16() {
+		WebElement login = driver.findElement(By.id("login"));
+		login.click();
+		
+		WebElement email = driver.findElement(By.id("email"));
+		email.sendKeys("ryanko.4903@gmail.com");
+		
+		WebElement pass= driver.findElement(By.id("pass"));
+		pass.sendKeys("123456");
+		
+		WebElement loginButton = driver.findElement(By.id("login"));
+		loginButton.click();
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement shop = wait.until(ExpectedConditions.elementToBeClickable(By.id("shop")));
+        shop.click();
+        
+        WebElement comboCategory = driver.findElement(By.id("filter-category"));
+        comboCategory.click();
+        WebElement isiCategory = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='select__menu css-1nmdiq5-menu']")));
+        isiCategory.click();
+        comboCategory.click();
+        WebElement inputCategory = driver.findElement(By.xpath("//input[@class='select__input' and @type='text']"));
+        inputCategory.sendKeys("Monitor");
+        isiCategory = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='select__menu css-1nmdiq5-menu']")));
+        isiCategory.click();
+                
+        List<WebElement> items = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='MuiCardContent-root h-48 bg-abu-gelap css-46bh2p-MuiCardContent-root']//div[@class='MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom line-clamp-2 css-i9mztq-MuiTypography-root']")));
+        
+        WebElement min = wait.until(ExpectedConditions.elementToBeClickable(By.id("min")));
+    	min.clear();
+    	min.sendKeys("1000000");
+    	WebElement max = driver.findElement(By.id("max"));
+    	max.click();
+    	max.clear();
+    	max.sendKeys("10000000");
+
+    	items = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='MuiCardContent-root h-48 bg-abu-gelap css-46bh2p-MuiCardContent-root']//div[@class='MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom line-clamp-2 css-i9mztq-MuiTypography-root']")));
 	}
 	
 	@AfterMethod
