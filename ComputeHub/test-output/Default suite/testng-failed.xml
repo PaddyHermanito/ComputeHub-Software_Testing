@@ -5,7 +5,7 @@
     <classes>
       <class name="Testing.ComputeHub.TestUser">
         <methods>
-          <include name="TC15"/>
+          <include name="TC19"/>
           <include name="closeBrowser"/>
           <include name="launchBrowser"/>
         </methods>

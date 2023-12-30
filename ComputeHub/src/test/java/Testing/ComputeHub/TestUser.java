@@ -2,6 +2,7 @@ package Testing.ComputeHub;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Random;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -398,7 +399,7 @@ public class TestUser {
 	}
 	
 	@Test
-	public void TC15() {
+	public void TC15() throws InterruptedException {
 		WebElement login = driver.findElement(By.id("login"));
 		login.click();
 		
@@ -418,18 +419,19 @@ public class TestUser {
         List<WebElement> items = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='MuiCardContent-root h-48 bg-abu-gelap css-46bh2p-MuiCardContent-root']//div[@class='MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom line-clamp-2 css-i9mztq-MuiTypography-root']")));
         
         WebElement min = wait.until(ExpectedConditions.elementToBeClickable(By.id("min")));
-    	min.clear();
+        min.clear();
+        Thread.sleep(250);
     	min.sendKeys("1000000");
     	WebElement max = driver.findElement(By.id("max"));
-    	max.click();
     	max.clear();
+        Thread.sleep(250);
     	max.sendKeys("10000000");
 
     	items = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='MuiCardContent-root h-48 bg-abu-gelap css-46bh2p-MuiCardContent-root']//div[@class='MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom line-clamp-2 css-i9mztq-MuiTypography-root']")));
 	}
 	
 	@Test
-	public void TC16() {
+	public void TC16() throws InterruptedException {
 		WebElement login = driver.findElement(By.id("login"));
 		login.click();
 		
@@ -459,14 +461,125 @@ public class TestUser {
         List<WebElement> items = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='MuiCardContent-root h-48 bg-abu-gelap css-46bh2p-MuiCardContent-root']//div[@class='MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom line-clamp-2 css-i9mztq-MuiTypography-root']")));
         
         WebElement min = wait.until(ExpectedConditions.elementToBeClickable(By.id("min")));
-    	min.clear();
+        min.clear();
+        Thread.sleep(250);
     	min.sendKeys("1000000");
     	WebElement max = driver.findElement(By.id("max"));
-    	max.click();
     	max.clear();
+    	Thread.sleep(250);
     	max.sendKeys("10000000");
 
     	items = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='MuiCardContent-root h-48 bg-abu-gelap css-46bh2p-MuiCardContent-root']//div[@class='MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom line-clamp-2 css-i9mztq-MuiTypography-root']")));
+	}
+	
+	@Test
+	public void TC17() throws InterruptedException {
+		WebElement login = driver.findElement(By.id("login"));
+		login.click();
+		
+		WebElement email = driver.findElement(By.id("email"));
+		email.sendKeys("ryanko.4903@gmail.com");
+		
+		WebElement pass= driver.findElement(By.id("pass"));
+		pass.sendKeys("123456");
+		
+		WebElement loginButton = driver.findElement(By.id("login"));
+		loginButton.click();
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement chat = wait.until(ExpectedConditions.elementToBeClickable(By.id("chat")));
+		chat.click();
+		
+		WebElement textChat = wait.until(ExpectedConditions.elementToBeClickable(By.id("textChat")));
+    	textChat.sendKeys("halo software testing");
+    	WebElement sendChat = driver.findElement(By.id("sendChat"));
+    	Thread.sleep(1000);
+    	sendChat.click();
+    	Thread.sleep(1000);
+	}
+	
+	@Test
+	public void TC18() {
+		WebElement login = driver.findElement(By.id("login"));
+		login.click();
+		
+		WebElement email = driver.findElement(By.id("email"));
+		email.sendKeys("ryanko.4903@gmail.com");
+		
+		WebElement pass= driver.findElement(By.id("pass"));
+		pass.sendKeys("123456");
+		
+		WebElement loginButton = driver.findElement(By.id("login"));
+		loginButton.click();
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement best_deal = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("best_deal")));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(best_deal).perform();
+		
+		List<WebElement> itemBestDeals = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//a[@class='MuiButtonBase-root MuiCardActionArea-root css-1oitmrd-MuiButtonBase-root-MuiCardActionArea-root']")));
+		Random rand = new Random();
+		itemBestDeals.get(rand.nextInt(itemBestDeals.size())).click();
+		
+		WebElement addcart = wait.until(ExpectedConditions.elementToBeClickable(By.id("addcart")));
+    	addcart.click();
+    	
+    	Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+    	alert = driver.switchTo().alert();
+
+        String alertText = alert.getText();
+        Assert.assertEquals("Added to cart", alertText);
+        alert.accept();
+        
+        driver.switchTo().defaultContent();
+        
+        List<WebElement> listCart = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='bg-abu-super-gelap rounded-2xl px-10 py-8 mb-5 text-white flex relative']")));
+	}
+	
+	@Test
+	public void TC19() throws InterruptedException {
+		WebElement login = driver.findElement(By.id("login"));
+		login.click();
+		
+		WebElement email = driver.findElement(By.id("email"));
+		email.sendKeys("ryanko.4903@gmail.com");
+		
+		WebElement pass= driver.findElement(By.id("pass"));
+		pass.sendKeys("123456");
+		
+		WebElement loginButton = driver.findElement(By.id("login"));
+		loginButton.click();
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement best_deal = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("best_deal")));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(best_deal).perform();
+		
+		List<WebElement> itemBestDeals = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//a[@class='MuiButtonBase-root MuiCardActionArea-root css-1oitmrd-MuiButtonBase-root-MuiCardActionArea-root']")));
+		Random rand = new Random();
+		itemBestDeals.get(rand.nextInt(itemBestDeals.size())).click();
+		
+		WebElement plus = wait.until(ExpectedConditions.elementToBeClickable(By.id("+")));
+		WebElement bnykStok = driver.findElement(By.id("info-stok"));
+		String[] realStok = (bnykStok.getText()).split(" : ");
+        for (int i = 0; i < Integer.parseInt(realStok[1]); i++) {
+			plus.click();
+		}
+        Thread.sleep(1000);
+		
+		WebElement addcart = wait.until(ExpectedConditions.elementToBeClickable(By.id("addcart")));
+    	addcart.click();
+    	
+    	Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+    	alert = driver.switchTo().alert();
+
+        String alertText = alert.getText();
+        Assert.assertEquals("Added to cart", alertText);
+        alert.accept();
+        
+        driver.switchTo().defaultContent();
+        
+        List<WebElement> listCart = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='bg-abu-super-gelap rounded-2xl px-10 py-8 mb-5 text-white flex relative']")));
 	}
 	
 	@AfterMethod
