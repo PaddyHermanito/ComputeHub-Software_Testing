@@ -562,7 +562,8 @@ public class TestUser {
 		WebElement plus = wait.until(ExpectedConditions.elementToBeClickable(By.id("+")));
 		WebElement bnykStok = driver.findElement(By.id("info-stok"));
 		String[] realStok = (bnykStok.getText()).split(" : ");
-        for (int i = 0; i < Integer.parseInt(realStok[1]); i++) {
+		// Melebihi stok 10
+        for (int i = 0; i < Integer.parseInt(realStok[1])+10; i++) {
 			plus.click();
 		}
         Thread.sleep(1000);
@@ -571,6 +572,45 @@ public class TestUser {
     	addcart.click();
     	
     	Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+    	alert = driver.switchTo().alert();
+
+        String alertText = alert.getText();
+        Assert.assertEquals("Added to cart", alertText);
+        alert.accept();
+        
+        driver.switchTo().defaultContent();
+        
+        List<WebElement> listCart = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='bg-abu-super-gelap rounded-2xl px-10 py-8 mb-5 text-white flex relative']")));
+	}
+	
+	@Test
+	public void TC20() {
+		WebElement login = driver.findElement(By.id("login"));
+		login.click();
+		
+		WebElement email = driver.findElement(By.id("email"));
+		email.sendKeys("ryanko.4903@gmail.com");
+		
+		WebElement pass= driver.findElement(By.id("pass"));
+		pass.sendKeys("123456");
+		
+		WebElement loginButton = driver.findElement(By.id("login"));
+		loginButton.click();
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement build = wait.until(ExpectedConditions.elementToBeClickable(By.id("build")));
+		build.click();
+		
+		String[] tipeItem = {"Processor", "Motherboard", "VGA", "RAM", "PSU", "SSD", "HDD", "Casing", "Cooling", "Monitor", "Keyboard", "Mouse"};
+		for (String tipe : tipeItem) {
+			WebElement select = driver.findElement(By.id(tipe));
+			select.click();
+			WebElement isiSelect = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='select__menu css-1nmdiq5-menu']")));
+			isiSelect.click();
+		}
+		WebElement addtocart = driver.findElement(By.id("addCart"));
+		addtocart.click();
+		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
     	alert = driver.switchTo().alert();
 
         String alertText = alert.getText();
