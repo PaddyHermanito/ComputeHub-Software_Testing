@@ -129,8 +129,26 @@ public class Admin {
         WebElement filter_promo = wait.until(ExpectedConditions.elementToBeClickable(By.id("filter-promo")));
 //        WebElement filter_promo = driver.findElement(By.id("filter-promo"));
         filter_promo.click();
+        WebElement inputPromo = driver.findElement(By.xpath("//input[@class='select__input' and @type='text']"));
+        inputPromo.sendKeys("logitech");
         WebElement menu_promo = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='select__menu css-1nmdiq5-menu']")));
         menu_promo.click();
+        WebElement promo_name = wait.until(ExpectedConditions.elementToBeClickable(By.name("promo_name")));
+        promo_name.sendKeys("promo baru");
+        WebElement promo_price = wait.until(ExpectedConditions.elementToBeClickable(By.name("promo_price")));
+        promo_price.sendKeys("150000");
+        WebElement addpromo=wait.until(ExpectedConditions.elementToBeClickable(By.name("addpromo")));
+        addpromo.click();
+        
+        alert = wait.until(ExpectedConditions.alertIsPresent());
+        alert = driver.switchTo().alert();
+
+        // Ambil teks dari alert
+        alertText = alert.getText();
+//        System.out.println("Alert Text: " + alertText);
+     // Terima (klik OK) pada alert
+        alert.accept();
+        
         
         WebElement logout = wait.until(ExpectedConditions.elementToBeClickable(By.id("logout")));
         logout.click();
