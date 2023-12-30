@@ -386,6 +386,70 @@ public class TestAdmin {
 	}
 	
 	@Test
+	public void TC12() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = driver.findElement(By.id("login"));
+		login.click();
+		
+		WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
+		email.sendKeys("admin@gmail.com");
+		
+		WebElement pass= driver.findElement(By.id("pass"));
+		pass.sendKeys("admin1");
+		
+		WebElement loginButton = driver.findElement(By.id("login"));
+		loginButton.click();
+		
+		WebElement confirmation = wait.until(ExpectedConditions.elementToBeClickable(By.id("Confirmation")));
+		confirmation.click();
+		
+		List<WebElement> reject = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.id("reject-trans")));
+		reject.get(0).click();
+		
+		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        alert = driver.switchTo().alert();
+
+        String alertText = alert.getText();
+        Assert.assertEquals("Transaction rejected", alertText);
+        alert.accept();
+        
+        driver.switchTo().defaultContent();
+	}
+	
+	@Test
+	public void TC13() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = driver.findElement(By.id("login"));
+		login.click();
+		
+		WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
+		email.sendKeys("admin@gmail.com");
+		
+		WebElement pass= driver.findElement(By.id("pass"));
+		pass.sendKeys("admin1");
+		
+		WebElement loginButton = driver.findElement(By.id("login"));
+		loginButton.click();
+		
+		WebElement confirmation = wait.until(ExpectedConditions.elementToBeClickable(By.id("Confirmation")));
+		confirmation.click();
+		
+		List<WebElement> reject = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.id("confirm-trans")));
+		reject.get(0).click();
+		
+		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        alert = driver.switchTo().alert();
+
+        String alertText = alert.getText();
+        Assert.assertEquals("Transaction confirmed", alertText);
+        alert.accept();
+        
+        driver.switchTo().defaultContent();
+	}
+	
+	@Test
 	public void TC18() throws InterruptedException {
 		WebElement login = driver.findElement(By.id("login"));
 		login.click();

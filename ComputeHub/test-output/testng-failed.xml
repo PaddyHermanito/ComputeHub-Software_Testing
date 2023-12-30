@@ -7,7 +7,7 @@
         <methods>
           <include name="closeBrowser"/>
           <include name="launchBrowser"/>
-          <include name="TC11"/>
+          <include name="TC12"/>
         </methods>
       </class> <!-- Testing.ComputeHub.TestAdmin -->
     </classes>
