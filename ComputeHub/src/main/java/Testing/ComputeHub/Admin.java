@@ -112,7 +112,7 @@ public class Admin {
 //        dateStart.clear();
         dateStart.sendKeys("08122023");
         
-        //skip ke tc15
+        //skip ke tc14
         WebElement chat = wait.until(ExpectedConditions.elementToBeClickable(By.id("Chat")));
         chat.click();
         WebElement user0 = wait.until(ExpectedConditions.elementToBeClickable(By.id("user0")));
@@ -149,6 +149,17 @@ public class Admin {
      // Terima (klik OK) pada alert
         alert.accept();
         
+        WebElement cariHapus = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("promo baru"))).findElement(By.tagName("button"));
+        cariHapus.click();
+        
+        alert = wait.until(ExpectedConditions.alertIsPresent());
+        alert = driver.switchTo().alert();
+
+        // Ambil teks dari alert
+        alertText = alert.getText();
+//        System.out.println("Alert Text: " + alertText);
+     // Terima (klik OK) pada alert
+        alert.accept();
         
         WebElement logout = wait.until(ExpectedConditions.elementToBeClickable(By.id("logout")));
         logout.click();
