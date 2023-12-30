@@ -610,6 +610,7 @@ public class TestUser {
 		}
 		WebElement addtocart = driver.findElement(By.id("addCart"));
 		addtocart.click();
+		
 		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
     	alert = driver.switchTo().alert();
 
@@ -620,6 +621,72 @@ public class TestUser {
         driver.switchTo().defaultContent();
         
         List<WebElement> listCart = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='bg-abu-super-gelap rounded-2xl px-10 py-8 mb-5 text-white flex relative']")));
+	}
+	
+	@Test
+	public void TC21() {
+		WebElement login = driver.findElement(By.id("login"));
+		login.click();
+		
+		WebElement email = driver.findElement(By.id("email"));
+		email.sendKeys("ryanko.4903@gmail.com");
+		
+		WebElement pass= driver.findElement(By.id("pass"));
+		pass.sendKeys("123456");
+		
+		WebElement loginButton = driver.findElement(By.id("login"));
+		loginButton.click();
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));		
+		WebElement user = wait.until(ExpectedConditions.elementToBeClickable(By.id("user")));
+        user.click();
+        WebElement userProfile = wait.until(ExpectedConditions.elementToBeClickable(By.id("userProfile")));
+        userProfile.click();
+        WebElement history = wait.until(ExpectedConditions.elementToBeClickable(By.id("history")));
+        history.click();
+        WebElement Rejected = wait.until(ExpectedConditions.elementToBeClickable(By.id("Rejected")));
+        Rejected.click();
+        
+        List<WebElement> listHistory = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.id("list-history")));
+	}
+	
+	@Test
+	public void TC22() {
+		WebElement login = driver.findElement(By.id("login"));
+		login.click();
+		
+		WebElement email = driver.findElement(By.id("email"));
+		email.sendKeys("ryanko.4903@gmail.com");
+		
+		WebElement pass= driver.findElement(By.id("pass"));
+		pass.sendKeys("123456");
+		
+		WebElement loginButton = driver.findElement(By.id("login"));
+		loginButton.click();
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));		
+		WebElement user = wait.until(ExpectedConditions.elementToBeClickable(By.id("user")));
+        user.click();
+        WebElement userProfile = wait.until(ExpectedConditions.elementToBeClickable(By.id("userProfile")));
+        userProfile.click();
+        WebElement history = wait.until(ExpectedConditions.elementToBeClickable(By.id("history")));
+        history.click();
+        WebElement Rejected = wait.until(ExpectedConditions.elementToBeClickable(By.id("Pending")));
+        Rejected.click();
+        
+        List<WebElement> listHistory = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.id("detail-history")));
+        listHistory.get(0).click();
+        WebElement cancel = wait.until(ExpectedConditions.elementToBeClickable(By.id("cancel")));
+        cancel.click();
+        
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+    	alert = driver.switchTo().alert();
+
+        String alertText = alert.getText();
+        Assert.assertEquals("Transaction saved successfully", alertText);
+        alert.accept();
+        
+        driver.switchTo().defaultContent();
 	}
 	
 	@AfterMethod

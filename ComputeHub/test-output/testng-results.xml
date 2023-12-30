@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-30T11:28:42 WIB" name="Default suite" finished-at="2023-12-30T11:28:51 WIB" duration-ms="8378">
+  <suite started-at="2023-12-30T12:14:47 WIB" name="Default suite" finished-at="2023-12-30T12:14:52 WIB" duration-ms="5755">
     <groups>
     </groups>
-    <test started-at="2023-12-30T11:28:42 WIB" name="Default test" finished-at="2023-12-30T11:28:51 WIB" duration-ms="8378">
+    <test started-at="2023-12-30T12:14:47 WIB" name="Default test" finished-at="2023-12-30T12:14:52 WIB" duration-ms="5755">
       <class name="Testing.ComputeHub.TestUser">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@428640fa]" started-at="2023-12-30T11:28:43 WIB" name="launchBrowser" finished-at="2023-12-30T11:28:45 WIB" duration-ms="1998" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@29215f06]" started-at="2023-12-30T12:14:47 WIB" name="launchBrowser" finished-at="2023-12-30T12:14:49 WIB" duration-ms="2045" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="TC20()[pri:0, instance:Testing.ComputeHub.TestUser@428640fa]" started-at="2023-12-30T11:28:45 WIB" name="TC20" finished-at="2023-12-30T11:28:50 WIB" duration-ms="5210" status="PASS">
+        <test-method signature="TC23()[pri:0, instance:Testing.ComputeHub.TestUser@29215f06]" started-at="2023-12-30T12:14:49 WIB" name="TC23" finished-at="2023-12-30T12:14:52 WIB" duration-ms="3675" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC20 -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@428640fa]" started-at="2023-12-30T11:28:50 WIB" name="closeBrowser" finished-at="2023-12-30T11:28:51 WIB" duration-ms="1120" status="PASS">
+        </test-method> <!-- TC23 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@29215f06]" started-at="2023-12-30T12:14:52 WIB" name="closeBrowser" finished-at="2023-12-30T12:14:52 WIB" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
