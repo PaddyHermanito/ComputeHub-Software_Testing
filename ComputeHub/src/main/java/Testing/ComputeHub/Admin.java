@@ -121,6 +121,20 @@ public class Admin {
         textChat.sendKeys("ya");
         WebElement sendChat = wait.until(ExpectedConditions.elementToBeClickable(By.id("sendChat")));
         sendChat.click();
+        WebElement searchUser = wait.until(ExpectedConditions.elementToBeClickable(By.id("searchUser")));
+        searchUser.sendKeys("ryan kohans");
+        
+        WebElement Promo = wait.until(ExpectedConditions.elementToBeClickable(By.id("Promo")));
+        Promo.click();
+        WebElement filter_promo = wait.until(ExpectedConditions.elementToBeClickable(By.id("filter-promo")));
+//        WebElement filter_promo = driver.findElement(By.id("filter-promo"));
+        filter_promo.click();
+        WebElement menu_promo = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='select__menu css-1nmdiq5-menu']")));
+        menu_promo.click();
+        
+        WebElement logout = wait.until(ExpectedConditions.elementToBeClickable(By.id("logout")));
+        logout.click();
+        
         Thread.sleep(2000);
     	driver.quit();
     	System.out.println("Done");
