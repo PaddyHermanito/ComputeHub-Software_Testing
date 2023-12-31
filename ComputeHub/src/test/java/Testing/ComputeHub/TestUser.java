@@ -21,7 +21,7 @@ import org.testng.annotations.Test;
 
 public class TestUser {
 	public WebDriver driver;
-	public String hostUrl = "http://localhost:5173/";
+	public String hostUrl = "http://computehub.vercel.app/";
 	
 	@BeforeMethod
 	public void launchBrowser() {
@@ -287,8 +287,8 @@ public class TestUser {
 	}
 	
 	// Register User - Exclude biar tidak register ulang"
-//	@Test(enabled = false)
-	@Test
+	@Test(enabled = false)
+//	@Test
 	public void TC11() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		

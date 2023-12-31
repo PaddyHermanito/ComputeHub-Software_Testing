@@ -21,7 +21,7 @@ import org.testng.annotations.Test;
 
 public class TestAdmin {
 	public WebDriver driver;
-	public String hostUrl = "http://localhost:5173/";
+	public String hostUrl = "http://computehub.vercel.app/";
 	
 	@BeforeMethod
 	public void launchBrowser() {
@@ -128,8 +128,8 @@ public class TestAdmin {
 	}
 	
 	// Delete User - Exclude biar tidak delete terus-terusan
-//	@Test(enabled = false)
-	@Test
+	@Test(enabled = false)
+//	@Test
 	public void TC05() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
@@ -162,8 +162,8 @@ public class TestAdmin {
 	}
 	
 	// Update User - Exclude biar tidak update terus-terusan
-//	@Test(enabled = false)
-	@Test
+	@Test(enabled = false)
+//	@Test
 	public void TC06() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
@@ -217,8 +217,8 @@ public class TestAdmin {
 	}
 	
 	// Delete Item - Exclude biar tidak delete terus-terusan
-//	@Test(enabled=false)
-	@Test
+	@Test(enabled=false)
+//	@Test
 	public void TC07() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
