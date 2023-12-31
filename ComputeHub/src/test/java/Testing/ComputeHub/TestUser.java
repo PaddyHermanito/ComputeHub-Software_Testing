@@ -34,10 +34,12 @@ public class TestUser {
 	
 	@Test
 	public void TC01() {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
-		WebElement email = driver.findElement(By.id("email"));
+		WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
 		email.sendKeys("ryanko.4903@gmail.com");
 		
 		WebElement pass= driver.findElement(By.id("pass"));
@@ -46,7 +48,6 @@ public class TestUser {
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
     	
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
         alert = driver.switchTo().alert();
 
@@ -59,10 +60,12 @@ public class TestUser {
 	
 	@Test
 	public void TC02() {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
-		WebElement email = driver.findElement(By.id("email"));
+		WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
 		email.sendKeys("paddy.h21@mhs.istts.ac.id");
 		
 		WebElement pass= driver.findElement(By.id("pass"));
@@ -71,7 +74,6 @@ public class TestUser {
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
     	
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
         alert = driver.switchTo().alert();
 
@@ -84,10 +86,12 @@ public class TestUser {
 	
 	@Test
 	public void TC03() {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
-		WebElement email = driver.findElement(By.id("email"));
+		WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
 		email.sendKeys("admin@gmail.com");
 		
 		WebElement pass= driver.findElement(By.id("pass"));
@@ -96,7 +100,6 @@ public class TestUser {
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
     	
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement navbar = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("Master Item")));
 		
 		Assert.assertEquals(hostUrl+"admin/", driver.getCurrentUrl());
@@ -104,10 +107,12 @@ public class TestUser {
 	
 	@Test
 	public void TC04() {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
-		WebElement email = driver.findElement(By.id("email"));
+		WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
 		email.sendKeys("ryanko.4903@gmail.com");
 		
 		WebElement pass= driver.findElement(By.id("pass"));
@@ -116,7 +121,6 @@ public class TestUser {
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
     		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement best_deal = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("best_deal")));
 		
 		Assert.assertEquals(hostUrl, driver.getCurrentUrl());
@@ -124,7 +128,9 @@ public class TestUser {
 	
 	@Test
 	public void TC05() {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
 		WebElement toRegister = driver.findElement(By.id("register_now"));
@@ -158,7 +164,9 @@ public class TestUser {
 	
 	@Test
 	public void TC06() {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
 		WebElement toRegister = driver.findElement(By.id("register_now"));
@@ -176,9 +184,11 @@ public class TestUser {
 	
 	@Test
 	public void TC07() {
-		WebElement login = driver.findElement(By.id("login"));
-		login.click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
+		login.click();
+				
 		WebElement toRegister = driver.findElement(By.id("register_now"));
 		toRegister.click();
 		
@@ -194,7 +204,9 @@ public class TestUser {
 	
 	@Test
 	public void TC08() {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
 		WebElement toRegister = driver.findElement(By.id("register_now"));
@@ -212,7 +224,9 @@ public class TestUser {
 	
 	@Test
 	public void TC09() {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
 		WebElement toRegister = driver.findElement(By.id("register_now"));
@@ -233,9 +247,11 @@ public class TestUser {
 	
 	@Test
 	public void TC10() {
-		WebElement login = driver.findElement(By.id("login"));
-		login.click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
+		login.click();
+				
 		WebElement toRegister = driver.findElement(By.id("register_now"));
 		toRegister.click();
 		
@@ -260,7 +276,6 @@ public class TestUser {
 		WebElement btnRegister = driver.findElement(By.id("register"));
 		btnRegister.click();
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
         alert = driver.switchTo().alert();
 
@@ -272,9 +287,12 @@ public class TestUser {
 	}
 	
 	// Register User - Exclude biar tidak register ulang"
-	@Test(enabled = false)
+//	@Test(enabled = false)
+	@Test
 	public void TC11() {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
 		WebElement toRegister = driver.findElement(By.id("register_now"));
@@ -301,7 +319,6 @@ public class TestUser {
 		WebElement btnRegister = driver.findElement(By.id("register"));
 		btnRegister.click();
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
         alert = driver.switchTo().alert();
 
@@ -314,10 +331,12 @@ public class TestUser {
 	
 	@Test
 	public void TC12() {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
-		WebElement email = driver.findElement(By.id("email"));
+		WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
 		email.sendKeys("ryanko.4903@gmail.com");
 		
 		WebElement pass= driver.findElement(By.id("pass"));
@@ -326,7 +345,6 @@ public class TestUser {
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement best_deal = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("best_deal")));
         Actions actions = new Actions(driver);
         actions.moveToElement(best_deal).perform();
@@ -337,10 +355,12 @@ public class TestUser {
 	
 	@Test
 	public void TC13() {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
-		WebElement email = driver.findElement(By.id("email"));
+		WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
 		email.sendKeys("ryanko.4903@gmail.com");
 		
 		WebElement pass= driver.findElement(By.id("pass"));
@@ -349,7 +369,6 @@ public class TestUser {
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement cari = wait.until(ExpectedConditions.elementToBeClickable(By.id("searchItem")));
         cari.click();
     	cari.sendKeys("rtx");
@@ -369,10 +388,12 @@ public class TestUser {
 	
 	@Test
 	public void TC14() {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
-		WebElement email = driver.findElement(By.id("email"));
+		WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
 		email.sendKeys("ryanko.4903@gmail.com");
 		
 		WebElement pass= driver.findElement(By.id("pass"));
@@ -381,7 +402,6 @@ public class TestUser {
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement shop = wait.until(ExpectedConditions.elementToBeClickable(By.id("shop")));
         shop.click();
         
@@ -400,10 +420,12 @@ public class TestUser {
 	
 	@Test
 	public void TC15() throws InterruptedException {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
-		WebElement email = driver.findElement(By.id("email"));
+		WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
 		email.sendKeys("ryanko.4903@gmail.com");
 		
 		WebElement pass= driver.findElement(By.id("pass"));
@@ -412,7 +434,6 @@ public class TestUser {
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement shop = wait.until(ExpectedConditions.elementToBeClickable(By.id("shop")));
         shop.click();
         
@@ -432,10 +453,12 @@ public class TestUser {
 	
 	@Test
 	public void TC16() throws InterruptedException {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
-		WebElement email = driver.findElement(By.id("email"));
+		WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
 		email.sendKeys("ryanko.4903@gmail.com");
 		
 		WebElement pass= driver.findElement(By.id("pass"));
@@ -444,7 +467,6 @@ public class TestUser {
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement shop = wait.until(ExpectedConditions.elementToBeClickable(By.id("shop")));
         shop.click();
         
@@ -474,10 +496,12 @@ public class TestUser {
 	
 	@Test
 	public void TC17() throws InterruptedException {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
-		WebElement email = driver.findElement(By.id("email"));
+		WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
 		email.sendKeys("ryanko.4903@gmail.com");
 		
 		WebElement pass= driver.findElement(By.id("pass"));
@@ -486,7 +510,6 @@ public class TestUser {
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement chat = wait.until(ExpectedConditions.elementToBeClickable(By.id("chat")));
 		chat.click();
 		
@@ -500,10 +523,12 @@ public class TestUser {
 	
 	@Test
 	public void TC18() {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
-		WebElement email = driver.findElement(By.id("email"));
+		WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
 		email.sendKeys("ryanko.4903@gmail.com");
 		
 		WebElement pass= driver.findElement(By.id("pass"));
@@ -512,7 +537,6 @@ public class TestUser {
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement best_deal = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("best_deal")));
         Actions actions = new Actions(driver);
         actions.moveToElement(best_deal).perform();
@@ -538,10 +562,12 @@ public class TestUser {
 	
 	@Test
 	public void TC19() throws InterruptedException {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
-		WebElement email = driver.findElement(By.id("email"));
+		WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
 		email.sendKeys("ryanko.4903@gmail.com");
 		
 		WebElement pass= driver.findElement(By.id("pass"));
@@ -550,7 +576,6 @@ public class TestUser {
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement best_deal = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("best_deal")));
         Actions actions = new Actions(driver);
         actions.moveToElement(best_deal).perform();
@@ -585,10 +610,12 @@ public class TestUser {
 	
 	@Test
 	public void TC20() {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
-		WebElement email = driver.findElement(By.id("email"));
+		WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
 		email.sendKeys("ryanko.4903@gmail.com");
 		
 		WebElement pass= driver.findElement(By.id("pass"));
@@ -597,7 +624,6 @@ public class TestUser {
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement build = wait.until(ExpectedConditions.elementToBeClickable(By.id("build")));
 		build.click();
 		
@@ -625,10 +651,12 @@ public class TestUser {
 	
 	@Test
 	public void TC21() {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
-		WebElement email = driver.findElement(By.id("email"));
+		WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
 		email.sendKeys("ryanko.4903@gmail.com");
 		
 		WebElement pass= driver.findElement(By.id("pass"));
@@ -637,7 +665,6 @@ public class TestUser {
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));		
 		WebElement user = wait.until(ExpectedConditions.elementToBeClickable(By.id("user")));
         user.click();
         WebElement userProfile = wait.until(ExpectedConditions.elementToBeClickable(By.id("userProfile")));
@@ -652,10 +679,12 @@ public class TestUser {
 	
 	@Test
 	public void TC22() {
-		WebElement login = driver.findElement(By.id("login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebElement login = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login")));
 		login.click();
 		
-		WebElement email = driver.findElement(By.id("email"));
+		WebElement email = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
 		email.sendKeys("ryanko.4903@gmail.com");
 		
 		WebElement pass= driver.findElement(By.id("pass"));
@@ -664,7 +693,6 @@ public class TestUser {
 		WebElement loginButton = driver.findElement(By.id("login"));
 		loginButton.click();
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));		
 		WebElement user = wait.until(ExpectedConditions.elementToBeClickable(By.id("user")));
         user.click();
         WebElement userProfile = wait.until(ExpectedConditions.elementToBeClickable(By.id("userProfile")));

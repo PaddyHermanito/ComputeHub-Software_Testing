@@ -1,25 +1,277 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="22" passed="22" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-30T20:45:33 WIB" name="Default suite" finished-at="2023-12-30T20:45:40 WIB" duration-ms="6367">
+  <suite started-at="2023-12-31T11:06:30 WIB" name="Default suite" finished-at="2023-12-31T11:08:08 WIB" duration-ms="98677">
     <groups>
     </groups>
-    <test started-at="2023-12-30T20:45:33 WIB" name="Default test" finished-at="2023-12-30T20:45:40 WIB" duration-ms="6367">
-      <class name="Testing.ComputeHub.TestAdmin">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestAdmin@1151e434]" started-at="2023-12-30T20:45:33 WIB" name="launchBrowser" finished-at="2023-12-30T20:45:36 WIB" duration-ms="2577" status="PASS">
+    <test started-at="2023-12-31T11:06:30 WIB" name="Default test" finished-at="2023-12-31T11:08:08 WIB" duration-ms="98677">
+      <class name="Testing.ComputeHub.TestUser">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:30 WIB" name="launchBrowser" finished-at="2023-12-31T11:06:32 WIB" duration-ms="1885" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="TC13()[pri:0, instance:Testing.ComputeHub.TestAdmin@1151e434]" started-at="2023-12-30T20:45:36 WIB" name="TC13" finished-at="2023-12-30T20:45:39 WIB" duration-ms="2554" status="PASS">
+        <test-method signature="TC01()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:32 WIB" name="TC01" finished-at="2023-12-31T11:06:33 WIB" duration-ms="836" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC13 -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestAdmin@1151e434]" started-at="2023-12-30T20:45:39 WIB" name="closeBrowser" finished-at="2023-12-30T20:45:40 WIB" duration-ms="1167" status="PASS">
+        </test-method> <!-- TC01 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:33 WIB" name="closeBrowser" finished-at="2023-12-31T11:06:34 WIB" duration-ms="1116" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- Testing.ComputeHub.TestAdmin -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:34 WIB" name="launchBrowser" finished-at="2023-12-31T11:06:35 WIB" duration-ms="1400" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC02()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:35 WIB" name="TC02" finished-at="2023-12-31T11:06:36 WIB" duration-ms="877" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:36 WIB" name="closeBrowser" finished-at="2023-12-31T11:06:37 WIB" duration-ms="1085" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:37 WIB" name="launchBrowser" finished-at="2023-12-31T11:06:38 WIB" duration-ms="1283" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC03()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:38 WIB" name="TC03" finished-at="2023-12-31T11:06:39 WIB" duration-ms="814" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC03 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:39 WIB" name="closeBrowser" finished-at="2023-12-31T11:06:40 WIB" duration-ms="1111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:40 WIB" name="launchBrowser" finished-at="2023-12-31T11:06:42 WIB" duration-ms="1319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC04()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:42 WIB" name="TC04" finished-at="2023-12-31T11:06:42 WIB" duration-ms="807" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC04 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:42 WIB" name="closeBrowser" finished-at="2023-12-31T11:06:43 WIB" duration-ms="1106" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:43 WIB" name="launchBrowser" finished-at="2023-12-31T11:06:45 WIB" duration-ms="1400" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC05()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:45 WIB" name="TC05" finished-at="2023-12-31T11:06:45 WIB" duration-ms="564" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC05 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:45 WIB" name="closeBrowser" finished-at="2023-12-31T11:06:47 WIB" duration-ms="1101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:47 WIB" name="launchBrowser" finished-at="2023-12-31T11:06:48 WIB" duration-ms="1259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC06()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:48 WIB" name="TC06" finished-at="2023-12-31T11:06:48 WIB" duration-ms="297" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC06 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:48 WIB" name="closeBrowser" finished-at="2023-12-31T11:06:49 WIB" duration-ms="1094" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:49 WIB" name="launchBrowser" finished-at="2023-12-31T11:06:50 WIB" duration-ms="1308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC07()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:50 WIB" name="TC07" finished-at="2023-12-31T11:06:51 WIB" duration-ms="320" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC07 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:51 WIB" name="closeBrowser" finished-at="2023-12-31T11:06:52 WIB" duration-ms="1097" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:52 WIB" name="launchBrowser" finished-at="2023-12-31T11:06:53 WIB" duration-ms="1286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC08()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:53 WIB" name="TC08" finished-at="2023-12-31T11:06:54 WIB" duration-ms="310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC08 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:54 WIB" name="closeBrowser" finished-at="2023-12-31T11:06:55 WIB" duration-ms="1081" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:55 WIB" name="launchBrowser" finished-at="2023-12-31T11:06:56 WIB" duration-ms="1277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC09()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:56 WIB" name="TC09" finished-at="2023-12-31T11:06:56 WIB" duration-ms="350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC09 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:56 WIB" name="closeBrowser" finished-at="2023-12-31T11:06:57 WIB" duration-ms="1128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:57 WIB" name="launchBrowser" finished-at="2023-12-31T11:06:59 WIB" duration-ms="1295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC10()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:06:59 WIB" name="TC10" finished-at="2023-12-31T11:07:00 WIB" duration-ms="1119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC10 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:00 WIB" name="closeBrowser" finished-at="2023-12-31T11:07:01 WIB" duration-ms="1098" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:01 WIB" name="launchBrowser" finished-at="2023-12-31T11:07:02 WIB" duration-ms="1295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC11()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:02 WIB" name="TC11" finished-at="2023-12-31T11:07:03 WIB" duration-ms="1108" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC11 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:03 WIB" name="closeBrowser" finished-at="2023-12-31T11:07:04 WIB" duration-ms="1097" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:04 WIB" name="launchBrowser" finished-at="2023-12-31T11:07:06 WIB" duration-ms="1325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC12()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:06 WIB" name="TC12" finished-at="2023-12-31T11:07:07 WIB" duration-ms="1082" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC12 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:07 WIB" name="closeBrowser" finished-at="2023-12-31T11:07:08 WIB" duration-ms="1095" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:08 WIB" name="launchBrowser" finished-at="2023-12-31T11:07:09 WIB" duration-ms="1304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC13()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:09 WIB" name="TC13" finished-at="2023-12-31T11:07:11 WIB" duration-ms="1528" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC13 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:11 WIB" name="closeBrowser" finished-at="2023-12-31T11:07:12 WIB" duration-ms="1105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:12 WIB" name="launchBrowser" finished-at="2023-12-31T11:07:13 WIB" duration-ms="1361" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC14()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:13 WIB" name="TC14" finished-at="2023-12-31T11:07:15 WIB" duration-ms="1762" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC14 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:15 WIB" name="closeBrowser" finished-at="2023-12-31T11:07:16 WIB" duration-ms="1087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:16 WIB" name="launchBrowser" finished-at="2023-12-31T11:07:17 WIB" duration-ms="1418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC15()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:17 WIB" name="TC15" finished-at="2023-12-31T11:07:22 WIB" duration-ms="4353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC15 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:22 WIB" name="closeBrowser" finished-at="2023-12-31T11:07:23 WIB" duration-ms="1116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:23 WIB" name="launchBrowser" finished-at="2023-12-31T11:07:24 WIB" duration-ms="1286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC16()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:24 WIB" name="TC16" finished-at="2023-12-31T11:07:27 WIB" duration-ms="2832" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC16 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:27 WIB" name="closeBrowser" finished-at="2023-12-31T11:07:28 WIB" duration-ms="1104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:28 WIB" name="launchBrowser" finished-at="2023-12-31T11:07:29 WIB" duration-ms="1303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC17()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:29 WIB" name="TC17" finished-at="2023-12-31T11:07:32 WIB" duration-ms="3018" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC17 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:32 WIB" name="closeBrowser" finished-at="2023-12-31T11:07:34 WIB" duration-ms="1118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:34 WIB" name="launchBrowser" finished-at="2023-12-31T11:07:35 WIB" duration-ms="1272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC18()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:35 WIB" name="TC18" finished-at="2023-12-31T11:07:38 WIB" duration-ms="3285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC18 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:38 WIB" name="closeBrowser" finished-at="2023-12-31T11:07:39 WIB" duration-ms="1139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:39 WIB" name="launchBrowser" finished-at="2023-12-31T11:07:41 WIB" duration-ms="1267" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC19()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:41 WIB" name="TC19" finished-at="2023-12-31T11:07:50 WIB" duration-ms="8980" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC19 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:50 WIB" name="closeBrowser" finished-at="2023-12-31T11:07:51 WIB" duration-ms="1125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:51 WIB" name="launchBrowser" finished-at="2023-12-31T11:07:52 WIB" duration-ms="1303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC20()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:52 WIB" name="TC20" finished-at="2023-12-31T11:07:57 WIB" duration-ms="4919" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC20 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:57 WIB" name="closeBrowser" finished-at="2023-12-31T11:07:58 WIB" duration-ms="1115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:58 WIB" name="launchBrowser" finished-at="2023-12-31T11:07:59 WIB" duration-ms="1261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC21()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:07:59 WIB" name="TC21" finished-at="2023-12-31T11:08:01 WIB" duration-ms="2139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC21 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:08:01 WIB" name="closeBrowser" finished-at="2023-12-31T11:08:02 WIB" duration-ms="1102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:08:02 WIB" name="launchBrowser" finished-at="2023-12-31T11:08:04 WIB" duration-ms="1278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="TC22()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:08:04 WIB" name="TC22" finished-at="2023-12-31T11:08:07 WIB" duration-ms="3575" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC22 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Testing.ComputeHub.TestUser@4b0d79fc]" started-at="2023-12-31T11:08:07 WIB" name="closeBrowser" finished-at="2023-12-31T11:08:08 WIB" duration-ms="1117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- Testing.ComputeHub.TestUser -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
